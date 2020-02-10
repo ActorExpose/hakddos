@@ -10,9 +10,8 @@
 
 from queue import Queue
 from optparse import OptionParser
-
-
 import time,sys,socket,threading,logging,urllib.request,random
+
 def user_agent():
 	global uagent
 	uagent=[]
@@ -78,13 +77,22 @@ def dos2():
 
 
 def usage():
-		print (''' \033[92m
-					-h : Помощь
-					-s : Сервер ip
-					-p : Порт Дефолт 80
-					-t : По умолчанию 135 \033[0m''')					 
+	print (''' \033[92m
 
-sys.exit()
+
+     █───█─█──█─███─███─███   █──█─████─█──█─███─████ 
+     █───█─█──█──█───█──█     █──█─█──█─█─█──█───█──█
+     █─█─█─████──█───█──███   ████─████─██───███─████ 
+     █████─█──█──█───█──█     █──█─█──█─█─█──█───█─█  
+     ─█─█──█──█─███──█──███   █──█─█──█─█──█─███─█─█ 
+
+	Для использование:
+	-h : Помощь
+	-s : Сервер ip
+	-p : Порт Дефолт 80
+	-t : По умолчанию 135 \033[0m''')
+	sys.exit()
+
 
 def get_parameters():
 	global host
@@ -161,5 +169,3 @@ if __name__ == '__main__':
 			w.put(item)
 		q.join()
 		w.join()
-
-
