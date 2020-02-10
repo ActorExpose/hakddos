@@ -77,23 +77,23 @@ def dos2():
 
 
 def usage():
-	print (''' \033[92m	hakddos Doss Ютуб канал  v.1 https://www.youtube.com/channel/UCVb-EWszrRl87ppPWcAcyBQ
-	
+	print (''' \033[92m	hakddos Doss Ютуб канал \n https://www.youtube.com/channel/UCVb-EWszrRl87ppPWcAcyBQ\n
+
 						█───█─█──█─███─███─███
 						█───█─█──█──█───█──█
 						█─█─█─████──█───█──███
 						█████─█──█──█───█──█
-						─█─█──█──█─███──█──███
+						─█─█──█──█─███──█──███\n
 
 						█──█─████─█──█─███─████
 						█──█─█──█─█─█──█───█──█
 						████─████─██───███─████
 						█──█─█──█─█─█──█───█─█
-						█──█─█──█─█──█─███─█─█
+						█──█─█──█─█──█─███─█─█\n
 
-	Конечный пользователь несет ответственность за соблюдение всех применимых законов.
+	Конечный пользователь несет ответственность за соблюдение всех применимых законов.\n
     Это только для сценария тестирования сервера. \n
-	Для использование: python3 hakddos.py [-s] [-p] [-t]
+	Для использование: \n python3 hakddos.py [-s] [-p] [-t]\n
 	-h : Помощь
 	-s : Сервер ip
 	-p : Порт Дефолт 80
@@ -132,7 +132,7 @@ def get_parameters():
 
 # reading headers
 global data
-headers = open("hakddos.txt", "r")
+headers = open("headers.txt", "r")
 data = headers.read()
 headers.close()
 #task queue are q,w
