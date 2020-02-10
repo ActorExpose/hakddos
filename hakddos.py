@@ -10,9 +10,9 @@
 
 from queue import Queue
 from optparse import OptionParser
-import time,sys,socket,threading,logging,urllib.request,random
-from colorama import init, Fore, Back, Style
 
+
+import time,sys,socket,threading,logging,urllib.request,random
 def user_agent():
 	global uagent
 	uagent=[]
@@ -76,24 +76,14 @@ def dos2():
 		bot_hammering(random.choice(bots)+"http://"+host)
 		w.task_done()
 
-					def console_picture():
-					   print(Style.BRIGHT + Fore.YELLOW)
-						   print("                       █───█─█──█─███─███─███   █──█─████─█──█─███─████  ")
-						   print("                       █───█─█──█──█───█──█     █──█─█──█─█─█──█───█──█  ")
-						   print("                       █─█─█─████──█───█──███   ████─████─██───███─████  ")
-						   print("                       █████─█──█──█───█──█     █──█─█──█─█─█──█───█─█   ")
-						   print("                       ─█─█──█──█─███──█──███   █──█─█──█─█──█─███─█─█   ")
-
-
-					console_picture()
-					input()
 
 def usage():
-					print (''' \033[92m
-					-h : Помощь
-					-s : Сервер ip
-					-p : Порт Дефолт 80
-					-t : По умолчанию 135 \033[0m''')
+					 
+						 print("                       █───█─█──█─███─███─███   █──█─████─█──█─███─████  ")
+						 print("                       █───█─█──█──█───█──█     █──█─█──█─█─█──█───█──█  ")
+						 print("                       █─█─█─████──█───█──███   ████─████─██───███─████  ")
+						 print("                       █████─█──█──█───█──█     █──█─█──█─█─█──█───█─█   ")
+						 print("                       ─█─█──█──█─███──█──███   █──█─█──█─█──█─███─█─█   ")
 
 sys.exit()
 
