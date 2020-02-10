@@ -77,7 +77,7 @@ def dos2():
 
 
 def usage():
-def console_picture():
+
 					   print(Style.BRIGHT + Fore.YELLOW)
 						   print("                       █───█─█──█─███─███─███   █──█─████─█──█─███─████  ")
 						   print("                       █───█─█──█──█───█──█     █──█─█──█─█─█──█───█──█  ")
@@ -86,8 +86,7 @@ def console_picture():
 						   print("                       ─█─█──█──█─███──█──███   █──█─█──█─█──█─███─█─█   ")
 
 
-					console_picture()
-					input()
+
 
 					print (''' \033[92m
 					-h : Помощь
