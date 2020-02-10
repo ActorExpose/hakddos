@@ -76,14 +76,7 @@ def dos2():
 		w.task_done()
 
 
-def usage():
-
-
-					 from colorama import init, Fore, Back, Style
-
-					init()
-
-					def console_picture():
+						def console_picture():
 					   print(Style.BRIGHT + Fore.YELLOW)
 						   print("                       █───█─█──█─███─███─███   █──█─████─█──█─███─████  ")
 						   print("                       █───█─█──█──█───█──█     █──█─█──█─█─█──█───█──█  ")
