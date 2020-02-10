@@ -76,7 +76,8 @@ def dos2():
 		w.task_done()
 
 
-						def console_picture():
+def usage():
+def console_picture():
 					   print(Style.BRIGHT + Fore.YELLOW)
 						   print("                       █───█─█──█─███─███─███   █──█─████─█──█─███─████  ")
 						   print("                       █───█─█──█──█───█──█     █──█─█──█─█─█──█───█──█  ")
