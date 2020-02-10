@@ -11,6 +11,7 @@
 from queue import Queue
 from optparse import OptionParser
 import time,sys,socket,threading,logging,urllib.request,random
+from colorama import init, Fore, Back, Style
 
 def user_agent():
 	global uagent
@@ -74,10 +75,10 @@ def dos2():
 		item=w.get()
 		bot_hammering(random.choice(bots)+"http://"+host)
 		w.task_done()
+		
+					init()
 
-
-def usage():
-
+					def console_picture():
 					   print(Style.BRIGHT + Fore.YELLOW)
 						   print("                       █───█─█──█─███─███─███   █──█─████─█──█─███─████  ")
 						   print("                       █───█─█──█──█───█──█     █──█─█──█─█─█──█───█──█  ")
@@ -86,8 +87,10 @@ def usage():
 						   print("                       ─█─█──█──█─███──█──███   █──█─█──█─█──█─███─█─█   ")
 
 
+					console_picture()
+					input()
 
-
+def usage():
 					print (''' \033[92m
 					-h : Помощь
 					-s : Сервер ip
