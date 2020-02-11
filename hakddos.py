@@ -132,31 +132,21 @@ def dos2():
 def usage():
 	print (''' \033[92m
 
-	 ░██╗░░░░░░░██╗██╗░░██╗██╗████████╗███████╗
-	 ░██║░░██╗░░██║██║░░██║██║╚══██╔══╝██╔════╝
-	 ░╚██╗████╗██╔╝███████║██║░░░██║░░░█████╗░░
-	 ░░████╔═████║░██╔══██║██║░░░██║░░░██╔══╝░░
-	 ░░╚██╔╝░╚██╔╝░██║░░██║██║░░░██║░░░███████╗
-	 ░░░╚═╝░░░╚═╝░░╚═╝░░╚═╝╚═╝░░░╚═╝░░░╚══════╝
 
-	     ██╗░░██╗░█████╗░██╗░░██╗███████╗██████╗░
-	     ██║░░██║██╔══██╗██║░██╔╝██╔════╝██╔══██╗
-	     ███████║███████║█████═╝░█████╗░░██████╔╝
-	     ██╔══██║██╔══██║██╔═██╗░██╔══╝░░██╔══██╗
-	     ██║░░██║██║░░██║██║░╚██╗███████╗██║░░██║
-	     ╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝
-
+░█──░█ ░█─░█ ▀█▀ ▀▀█▀▀ ░█▀▀▀ 　 ░█─░█ ─█▀▀█ ░█─▄▀ ░█▀▀▀ ░█▀▀█
+░█░█░█ ░█▀▀█ ░█─ ─░█── ░█▀▀▀ 　 ░█▀▀█ ░█▄▄█ ░█▀▄─ ░█▀▀▀ ░█▄▄▀
+░█▄▀▄█ ░█─░█ ▄█▄ ─░█── ░█▄▄▄ 　 ░█─░█ ░█─░█ ░█─░█ ░█▄▄▄ ░█─░█
 
 
 	 Наш чат в телеграмм канале @whitehaker01
 
 	Что бы запустить:
-     phyton3 hakddos.py -s Сайт -p Порт -t 135
+     phyton3 hakddos.py -s ip адрес -p Порт -t 135
 
 	-s : Сервер ip
 	-p : Порт Дефолт 80
 	-t : По умолчанию 135 \033[0m''')
-	sys.clear()
+	sys.exit()
 
 
 def get_parameters():
@@ -164,12 +154,12 @@ def get_parameters():
 	global port
 	global thr
 	global item
-	optp = OptionParser(add_help_option=False,epilog="hakddos")
-	optp.add_option("-q","--Тихий", help="set logging to ERROR",action="store_const", dest="loglevel",const=logging.ERROR, default=logging.INFO)
-	optp.add_option("-s","--Сервер", dest="host",help="Атака на сервер ip -s ip")
-	optp.add_option("-p","--Порт",type="int",dest="port",help="-p 80 Дефолт 80")
-	optp.add_option("-t","--Турбо",type="int",dest="turbo",help="Дефолт 135 -t 135")
-	optp.add_option("-h","--Помощь",dest="help",action='store_true',help="Помощь тебе")
+    optp = OptionParser(add_help_option=False,epilog="hakddos")
+	optp.add_option("-q","--quiet", help="set logging to ERROR",action="store_const", dest="loglevel",const=logging.ERROR, default=logging.INFO)
+	optp.add_option("-s","--server", dest="host",help="attack to server ip -s ip")
+	optp.add_option("-p","--port",type="int",dest="port",help="-p 80 default 80")
+	optp.add_option("-t","--turbo",type="int",dest="turbo",help="default 135 -t 135")
+	optp.add_option("-h","--help",dest="help",action='store_true',help="help you")
 	opts, args = optp.parse_args()
 	logging.basicConfig(level=opts.loglevel,format='%(levelname)-8s %(message)s')
 	if opts.help:
